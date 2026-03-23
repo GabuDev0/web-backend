@@ -4,14 +4,15 @@ const Score = require('../models/Score');
 
 const createScore = async (req, res) => {
   try {
-    const { pseudo, score, totalQuestions } = req.body;
+    const { username, score, nbrQuestions } = req.body;
 
-    const newScore = new Score({ pseudo, score, totalQuestions });
+    const newScore = new Score({ username, score, nbrQuestions });
     await newScore.save();
 
     res.status(201).json(newScore);
   } catch (error) {
     res.status(500).json({ message: 'Erreur serveur lors de l’enregistrement du score' });
+    console.error("ERREUR BACKEND :", error);
   }
 };
 
