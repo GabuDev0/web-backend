@@ -35,7 +35,7 @@ const QuestionSchema = new mongoose.Schema({
   duration: Number,
   targetClicks: Number,
 
-  category: { type: String, default: 'general' }
+  category: { type: Number, default: 0 } // the index of the category
 });
 
 module.exports = mongoose.model('Question', QuestionSchema);

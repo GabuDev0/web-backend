@@ -6,6 +6,7 @@ const ScoreSchema = new mongoose.Schema({
   username: { type: String, required: true },
   score: { type: Number, required: true },
   nbrQuestions: { type: Number, required: true },
+  category: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now }
 });
 
