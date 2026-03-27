@@ -4,9 +4,9 @@ const Score = require('../models/Score');
 
 const createScore = async (req, res) => {
   try {
-    const { username, score, nbrQuestions } = req.body;
+    const { username, score, nbrQuestions, category} = req.body;
 
-    const newScore = new Score({ username, score, nbrQuestions });
+    const newScore = new Score({ username, score, nbrQuestions, category });
     await newScore.save();
 
     res.status(201).json(newScore);
