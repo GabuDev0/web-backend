@@ -11,7 +11,8 @@ const QuestionSchema = new mongoose.Schema({
     {
       t: String,
       img: String,
-      isCorrect: Boolean
+      isCorrect: Boolean,
+      offset: Number
     }
   ],
 
