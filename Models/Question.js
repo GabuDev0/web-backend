@@ -6,6 +6,17 @@ const QuestionSchema = new mongoose.Schema({
   type: { type: String, required: true },
   text: { type: String, required: true },
   image: { type: String, default: null },
+  audioFile: {type: String, default: null},
+
+  pairs: [
+    {
+      id: String,
+      left: String,
+      leftImg: String,
+      right: String,
+      rightImg: String
+    }
+  ],
 
   options: [
     {
